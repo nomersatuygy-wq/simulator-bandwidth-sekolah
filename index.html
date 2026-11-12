@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NetSchool — Simulator Bandwidth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-icon"><i data-lucide="network"></i></div><div><b>NetSchool</b><small>NETWORK LAB</small></div></div>
+    <div class="side-label">MENU UTAMA</div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</button>
+      <button class="nav-item" data-page="users"><i data-lucide="users"></i> Pengguna</button>
+      <button class="nav-item" data-page="bandwidth"><i data-lucide="gauge"></i> Alokasi Bandwidth</button>
+      <button class="nav-item" data-page="traffic"><i data-lucide="activity"></i> Simulasi Trafik</button>
+      <button class="nav-item" data-page="qos"><i data-lucide="sliders-horizontal"></i> Quality of Service</button>
+      <button class="nav-item" data-page="devices"><i data-lucide="router"></i> Perangkat Jaringan</button>
+      <button class="nav-item" data-page="reports"><i data-lucide="chart-no-axes-combined"></i> Laporan</button>
+      <button class="nav-item" data-page="settings"><i data-lucide="settings"></i> Pengaturan</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="online-dot"></div><span>Mode simulasi lokal</span><small>v1.0.0</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="mobile-menu" id="mobileMenu"><i data-lucide="menu"></i></button><div><div class="eyebrow">LABORATORIUM TJKT</div><h1 id="pageTitle">Dashboard</h1></div><div class="top-actions"><span class="status-pill"><span></span> Sistem aktif</span><button class="icon-btn" id="resetTop" title="Reset data"><i data-lucide="rotate-ccw"></i></button></div></header>
+    <section id="pageContent" class="content"></section>
+    <footer>NetSchool Simulator <span>•</span> Media pembelajaran TJKT — data simulasi, bukan pengukuran jaringan nyata.</footer>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="js/app.js"></script>
+</body></html>
